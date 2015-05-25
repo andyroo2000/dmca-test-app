@@ -22,7 +22,7 @@ class NoticesController extends Controller {
 	public function create()
 	{
 		// get list of providers
-		$providers = Provider::lists('name', $id);
+		$providers = Provider::lists('name', 'id');
 
 		// load a view to create a new notice
 		return view('notices.create', compact('providers'));
@@ -30,7 +30,7 @@ class NoticesController extends Controller {
 
 	public function confirm(PrepareNoticeRequest $request)
 	{
-
+		return $request->all();
 	}
 
 }
