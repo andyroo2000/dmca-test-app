@@ -21,6 +21,8 @@ Route::get('/', 'PagesController@home');
  */
 Route::resource('notices', 'NoticesController');
 
+Route::get('notices/create/confirm', 'NoticesController');
+
 /**
  * Authentication
  */
